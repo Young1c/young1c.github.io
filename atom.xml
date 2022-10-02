@@ -6,7 +6,7 @@
   <link href="http://young1c.github.io/atom.xml" rel="self"/>
   
   <link href="http://young1c.github.io/"/>
-  <updated>2022-10-02T09:22:44.216Z</updated>
+  <updated>2022-10-02T16:38:55.045Z</updated>
   <id>http://young1c.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Blog Setup</title>
+    <link href="http://young1c.github.io/2022/10/03/Blog-Setup/"/>
+    <id>http://young1c.github.io/2022/10/03/Blog-Setup/</id>
+    <published>2022-10-02T16:37:22.000Z</published>
+    <updated>2022-10-02T16:38:55.045Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="How-to-setup-Blog"><a href="#How-to-setup-Blog" class="headerlink" title="How to setup Blog"></a>How to setup Blog</h1><p>Follow the <a href="https://zhuanlan.zhihu.com/p/111614119">blog</a></p><h1 id="Where’s-the-theme"><a href="#Where’s-the-theme" class="headerlink" title="Where’s the theme"></a>Where’s the theme</h1><p>From Hexo with <a href="https://github.com/chongshengsun/hexo-theme-apollo">src</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;How-to-setup-Blog&quot;&gt;&lt;a href=&quot;#How-to-setup-Blog&quot; class=&quot;headerlink&quot; title=&quot;How to setup Blog&quot;&gt;&lt;/a&gt;How to setup Blog&lt;/h1&gt;&lt;p&gt;Follow the</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title></title>
