@@ -6,7 +6,7 @@
   <link href="http://young1c.github.io/atom.xml" rel="self"/>
   
   <link href="http://young1c.github.io/"/>
-  <updated>2022-10-02T16:38:55.045Z</updated>
+  <updated>2022-11-12T08:14:12.607Z</updated>
   <id>http://young1c.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>UEFI for RPi4</title>
+    <link href="http://young1c.github.io/2022/11/12/UEFI-for-RPi4/"/>
+    <id>http://young1c.github.io/2022/11/12/UEFI-for-RPi4/</id>
+    <published>2022-11-12T07:25:55.000Z</published>
+    <updated>2022-11-12T08:14:12.607Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="UEFI-固件获取及安装"><a href="#UEFI-固件获取及安装" class="headerlink" title="UEFI 固件获取及安装"></a>UEFI 固件获取及安装</h1><p>EDK2已经支持Raspberrypi 4的UEFI,可以直接下载源码编译安装.</p><p>也可以下载私人<a href="https://github.com/pftf/RPi4">预安装版本</a>,安装方法已经在README中说明.</p><ol><li>格式化SD卡并进行分区, 将UEFI固件copy到ESP分区</li><li>插入Pi4, 并启动</li><li>可以看到进入UEFI界面</li></ol><h1 id="Ubuntu安装"><a href="#Ubuntu安装" class="headerlink" title="Ubuntu安装"></a>Ubuntu安装</h1><ol><li>准备一个U盘,烧入ubuntu镜像.</li><li>启动树莓派,在UEFI的Boot Manager中选择通过USB启动</li><li>进入Ubuntu安装界面. 需要首先在shell下备份ESP分区下的UEFI固件及其他文件, 因为安装过程<br>中会将整个SD进行格式化并重新分区. 默认安装的固件无法直接启动(猜测和测试,原理未知)</li><li>返回Ubuntu的Installer界面, 将Ubuntu安装到SD卡上</li><li>完成安装后,返回shell界面,将我们备份的UEFI固件等文件复制到EFI分区下.(两个目录,<br>&#x2F;boot&#x2F;efi以及&#x2F;boot&#x2F;efi&#x2F;EFI&#x2F;ubuntu下. 应该只需要&#x2F;boot&#x2F;efi就可以了,但是没有测试.<br>保险起见两个都复制了)</li><li>重新启动.可以进入grub界面,选择ubuntu entry即可进入安装的ubuntu了</li></ol><p>需要注意的是,ubuntu默认不会输出日志到串口.重启前(或者在grub界面)需要编辑启动cmdline,将<br>日志输出到串口(console&#x3D;ttyS0,115200 earlycon).</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;UEFI-固件获取及安装&quot;&gt;&lt;a href=&quot;#UEFI-固件获取及安装&quot; class=&quot;headerlink&quot; title=&quot;UEFI 固件获取及安装&quot;&gt;&lt;/a&gt;UEFI 固件获取及安装&lt;/h1&gt;&lt;p&gt;EDK2已经支持Raspberrypi 4的UEFI,可以直</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Blog Setup</title>

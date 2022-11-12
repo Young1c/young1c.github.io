@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> UEFI for RPi4 · Hexo</title><meta name="description" content="UEFI for RPi4 - c"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/icon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://young1c.github.io/atom.xml" title="Hexo"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/icon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">UEFI for RPi4</h1><div class="post-info">Nov 12, 2022</div><div class="post-content"><h1 id="UEFI-固件获取及安装"><a href="#UEFI-固件获取及安装" class="headerlink" title="UEFI 固件获取及安装"></a>UEFI 固件获取及安装</h1><p>EDK2已经支持Raspberrypi 4的UEFI,可以直接下载源码编译安装.</p>
+<p>也可以下载私人<a target="_blank" rel="noopener" href="https://github.com/pftf/RPi4">预安装版本</a>,安装方法已经在README中说明.</p>
+<ol>
+<li>格式化SD卡并进行分区, 将UEFI固件copy到ESP分区</li>
+<li>插入Pi4, 并启动</li>
+<li>可以看到进入UEFI界面</li>
+</ol>
+<h1 id="Ubuntu安装"><a href="#Ubuntu安装" class="headerlink" title="Ubuntu安装"></a>Ubuntu安装</h1><ol>
+<li>准备一个U盘,烧入ubuntu镜像.</li>
+<li>启动树莓派,在UEFI的Boot Manager中选择通过USB启动</li>
+<li>进入Ubuntu安装界面. 需要首先在shell下备份ESP分区下的UEFI固件及其他文件, 因为安装过程<br>中会将整个SD进行格式化并重新分区. 默认安装的固件无法直接启动(猜测和测试,原理未知)</li>
+<li>返回Ubuntu的Installer界面, 将Ubuntu安装到SD卡上</li>
+<li>完成安装后,返回shell界面,将我们备份的UEFI固件等文件复制到EFI分区下.(两个目录,<br>&#x2F;boot&#x2F;efi以及&#x2F;boot&#x2F;efi&#x2F;EFI&#x2F;ubuntu下. 应该只需要&#x2F;boot&#x2F;efi就可以了,但是没有测试.<br>保险起见两个都复制了)</li>
+<li>重新启动.可以进入grub界面,选择ubuntu entry即可进入安装的ubuntu了</li>
+</ol>
+<p>需要注意的是,ubuntu默认不会输出日志到串口.重启前(或者在grub界面)需要编辑启动cmdline,将<br>日志输出到串口(console&#x3D;ttyS0,115200 earlycon).</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2022/10/03/Blog-Setup/" class="next">NEXT</a></div><div class="copyright"><p>© 2022 <a href="http://young1c.github.io">c</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
