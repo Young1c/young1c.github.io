@@ -15,4 +15,7 @@
 <li>重新启动.可以进入grub界面,选择ubuntu entry即可进入安装的ubuntu了</li>
 </ol>
 <p>需要注意的是,ubuntu默认不会输出日志到串口.重启前(或者在grub界面)需要编辑启动cmdline,将<br>日志输出到串口(console&#x3D;ttyS0,115200 earlycon).</p>
+<h1 id="Other-references"><a href="#Other-references" class="headerlink" title="Other references"></a>Other references</h1><p>本来想装Fedora的，搞了半天没搞定。这篇<a target="_blank" rel="noopener" href="https://github.com/glacion/fedora-chroot-installation/blob/master/docs/VM-Install.md">指导</a><br>也写得不错.</p>
+<p>后来分析了,主要是Pi4的固件没有搞定,一定要用Pi4的固件启动.发行版安装过程中安装的UEFI固件<br>可能有问题.</p>
+<p>另外这些发行版(Ubuntu,Pi4)都没有脚本安装知道,只好用它默认的安装程序,然后再修复固件了.<br>这点上Arch就做的不错,又非常详细的脚本<a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/Installation_guide">安装指导</a>,<br>可以全程手动操作,能够知道每一步需要做哪些操作,有什么作用.可惜Arch专注于x86,并没有官方<br>的arm64版本.</p>
 </div></article></div></main><footer><div class="paginator"><a href="/2022/10/03/Blog-Setup/" class="next">NEXT</a></div><div class="copyright"><p>© 2022 <a href="http://young1c.github.io">c</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
